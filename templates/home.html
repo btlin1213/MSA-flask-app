@@ -9,13 +9,15 @@
     <div class="welcome">
         <h2>Welcome to</h2>
         <h1>The (digital) Book of Answers</h1>
-        <button class="button history">VIEW QUESTION HISTORY</button>
+        <a href="/allquestions"> 
+            <button class="button history">VIEW QUESTION HISTORY</button>
+        </a>
     </div>
    
     <div class="form">
-        <form>
-            <label for="question">Enter your question here:</label>
-            <input type="text" id="answer"> 
+        <form action="{{ url_for('add_question') }}" method="POST">
+            <label for="questionInstruction">Enter your question here:</label>
+            <input type="text" id="questionBody"> 
             <input type="submit" value="Submit">
         </form>
     </div>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+    
+    <title>Past Questions</title>
+    <div class="questionslist">
+        <ul>
+            {% for question in questions %}
+            <li>Question: {{question.question_body}}</li>
+            <li>Answer: {{question.answer_body}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</html>
