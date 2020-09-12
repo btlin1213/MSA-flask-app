@@ -37,6 +37,8 @@ for question in questions:
     db.session.add(new_question_entry)
 db.session.commit()
 
+# global variable of most recent question
+last_question = None
 
 # ROUTES
 @app.route('/')
@@ -50,11 +52,15 @@ def add_question():
     new_question_entry = Question(question_body=question, answer_body=answer)
     db.session.add(new_question_entry)
     db.session.commit()
+    global last_question
+    last_question = new_question_entry
     return redirect(url_for('home'))
 
-@app.route('/answer')
-def show_answer():
-    return render_template("answer.html", answer=answer)
+# @app.route('/answer', methods=['GET'])
+# redirect(url_for('answer'))
+# def answer():
+#     return render_template("answer.html")
+
 
 @app.route('/allquestions')
 def show_all_questions():
