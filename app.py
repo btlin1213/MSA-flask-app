@@ -29,13 +29,13 @@ class Question(db.Model):
 # SET UP DATABASE
 db.drop_all()
 db.create_all()
-# sample questions and answers
-questions = ['Will I pass?', 'Will lockdown end soon?']
-for question in questions:
-    answer = random.choice(answers)
-    new_question_entry = Question(question_body=question, answer_body=answer)
-    db.session.add(new_question_entry)
-db.session.commit()
+# # sample questions and answers
+# questions = ['Will I pass?', 'Will lockdown end soon?']
+# for question in questions:
+#     answer = random.choice(answers)
+#     new_question_entry = Question(question_body=question, answer_body=answer)
+#     db.session.add(new_question_entry)
+# db.session.commit()
 
 
 # ROUTES
