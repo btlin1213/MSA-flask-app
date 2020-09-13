@@ -132,8 +132,16 @@ input:focus {
     background-color: none;
     border: 2px solid white;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 30%;
+}
+
+.answerPageHistory {
+    background-color: none;
+    border: 2px solid white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
 }
 
 
