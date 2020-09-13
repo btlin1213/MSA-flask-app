@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="/static/main.css">
     </head>
-    <title>Your Answer</title>
 
-    <!-- <div class="question">
-        <h1>Question: {{most_recent_question.question_body}} </h1>
+    <title>Book of Answers</title>
+    
+    <div class="question">
+        <h1>Question: {{ most_recent_question.question_body }}</h1>
     </div>
     
     <div class="answer">
-        <h1>Answer: {{most_recent_question.answer_body </h1>
-    </div> -->
+        <h1>Answer: {{ most_recent_question.answer_body }}</h1>
+    </div>
+    
+    <a href="/">
+        <button class="button another">ASK ANOTHER ONE</button>
+    </a>
 
-    <h1>ANSWER PAGE</h1>
-    <!-- <button class="button another" action="/">ASK ANOTHER ONE</button>
-    <button class="button history" action="/allquestions" method="GET">VIEW QUESTION HISTORY</button> -->
+    <a href="/allquestions"> 
+        <button class="button history">VIEW QUESTION HISTORY</button>
+    </a>
+
 </html>

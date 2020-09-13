@@ -1,6 +1,6 @@
 import os
 import random
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from answers import answers_pool as answers
 
@@ -37,8 +37,6 @@ for question in questions:
     db.session.add(new_question_entry)
 db.session.commit()
 
-# global variable of most recent question
-last_question = None
 
 # ROUTES
 @app.route('/')
@@ -52,14 +50,12 @@ def add_question():
     new_question_entry = Question(question_body=question, answer_body=answer)
     db.session.add(new_question_entry)
     db.session.commit()
-    global last_question
-    last_question = new_question_entry
-    return redirect(url_for('home'))
+    return redirect(url_for('answer'))
 
-# @app.route('/answer', methods=['GET'])
-# redirect(url_for('answer'))
-# def answer():
-#     return render_template("answer.html")
+@app.route('/answer')
+def answer():
+    last_question = Question.query.order_by(Question.id.desc()).first()
+    return render_template("answer.html", most_recent_question=last_question)
 
 
 @app.route('/allquestions')
