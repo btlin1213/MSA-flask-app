@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=lato:100";
 
+/* general */
 * {
     margin:0;
     padding:0;
@@ -20,18 +21,16 @@ body {
     animation: change 10s ease-in-out infinite;
 }
 
-.welcome {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 5rm;
-    text-align: center;
-    color: white;
-    border: 3px solid #fff;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2rem 2rem;
-
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .button {
@@ -47,20 +46,38 @@ body {
     cursor: pointer;
 }
 
+/* HOME PAGE */
+/* welcome box */ 
+.welcome {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5rm;
+    text-align: center;
+    color: white;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 2rem;
+
+}
+
+/* view question history button */
 .history {
     background-color: none;
     border: 2px solid white;
 }
 
+/* enter question form */
 form {
     text-align:center;
-    position: absolute;
-    top:  60%;
-    left: 37%;
+    position: relative;
+    top:  500px;
+    
 }
 
 input[type=text] {
-    width: 70%;
+    width: 500px;
 }
 
 label {
@@ -71,18 +88,8 @@ input:focus {
     border: 3px solid lightgrey
 }
 
-@keyframes change {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
 
+/* VIEW ALL QUESTIONS PAGE */
 .questionslist {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 5rm;
@@ -95,7 +102,7 @@ input:focus {
     padding: 2rem 2rem;
 }
 
-
+/* previous button, leads to home page */
 .previous {
     text-decoration: none;
     display: inline-block;
@@ -116,6 +123,7 @@ input:focus {
     border-radius: 0%;
 }
 
+/* ANSWER PAGE */
 .answer {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 5rm;
@@ -128,20 +136,22 @@ input:focus {
     padding: 2rem 2rem;
 }
 
+/* ask another question button */
 .another {
     background-color: none;
     border: 2px solid white;
-    position: absolute;
-    top: 60%;
-    left: 30%;
+    /* position: absolute;
+    top: 400px;
+    left: -50px; */
 }
 
+/* view question history from answer page */
 .answerPageHistory {
     background-color: none;
     border: 2px solid white;
-    position: absolute;
-    top: 60%;
-    left: 50%;
+    /* position: absolute;
+    top: 400px;
+    left: 200px; */
 }
 
 
