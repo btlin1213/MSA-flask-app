@@ -5,6 +5,12 @@ A digital 'book of answers' where the user enters a question and receives an ans
 
 Users are also able to view their past questions and answers.
 
+# Tech Stack
+- HTML + CSS frontend
+- flask backend 
+- SQLAlchemy database
+- (trying) Azure web app service hosting 
+
 ## Running Locally
 Always use a virtual environment!
 
