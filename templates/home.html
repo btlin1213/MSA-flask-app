@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+
+    <title>Book of Answers</title>
+    
+    <div class="welcome">
+        <h2>Welcome to</h2>
+        <h1>The (digital) Book of Answers</h1>
+        <a href="/allquestions"> 
+            <button class="button history">VIEW QUESTION HISTORY</button>
+        </a>
+    </div>
+   
+    <div class="form">
+        <form action="{{ url_for('add_question') }}" method="POST">
+            <label for="questionInstruction">Enter your question here:</label>
+            <input type="text" name="questionBody"> 
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+
+</html>
+
