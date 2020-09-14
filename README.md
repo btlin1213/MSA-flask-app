@@ -14,7 +14,10 @@ Users are also able to view their past questions and answers.
 ## Running Locally
 Always use a virtual environment!
 
+Clone this repo and cd to its directory on your local machine. 
+
 1.If you do not have the python3-venv package, install it as follows:
+
 `sudo apt-get install python3-venv`
 
 2.Create a virtual environment.
